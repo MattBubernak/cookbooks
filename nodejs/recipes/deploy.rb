@@ -2,6 +2,8 @@ log 'nodejs deploy executing ' do
     level :info
 end
 
+include_recipe 'application_javascript'
+
 app = search(:aws_opsworks_app).first
 app_path = "/srv/#{app['shortname']}"
 
