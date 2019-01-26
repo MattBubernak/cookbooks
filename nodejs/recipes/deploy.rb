@@ -1,3 +1,7 @@
+log 'nodejs deploy executing ' do
+    level :info
+end
+
 app = search(:aws_opsworks_app).first
 app_path = "/srv/#{app['shortname']}"
 
